@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "WWW">
+    <test name = "Upper Bar Tests" thread-count="3" parallel = "methods">
+        <classes>
+            <class name = "tests.UpperBarTest" ></class>
+        </classes>
+    </test>
+</suite>
