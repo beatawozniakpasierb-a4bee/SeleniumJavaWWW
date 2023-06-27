@@ -34,7 +34,6 @@ public class CasesTest extends BaseTest {
     @Test
     public void verifyListOfCases() {
         List<String> caseNames = casesPage.getListOfCaseStudies();
-        System.out.println(caseNames.size());
         Assert.assertTrue(caseNames.size() > 2);
     }
 

@@ -18,7 +18,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void testSetUp() {
-        driver = DriverFactory.getDriver("chrome");
+        driver = DriverFactory.getDriver("firefox");
         driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(TestData.BASE_URL);

@@ -30,34 +30,20 @@ public class ServicesTest extends BaseTest {
         upperBarMenuPage.verifyUrl(driver, servicesPage.servicesUrl);
     }
 
-    @Test
+    //@Test
     public void verifySecurityAssessment() {
         servicesPage.selectOption(servicesPage.getListOfOptions().get(0), driver);
     }
 
     @Test
-    public void verifyDigitalTransformation() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(1), driver);
-    }
+    public void verifyEachService() {
+        int i=0;
+        while(i<servicesPage.getListOfOptions().size()) {
+            servicesPage.selectOption(servicesPage.getListOfOptions().get(i), driver);
+            upperBarMenuPage.clickOnMenuServices();
+            i++;
+        }
 
-    @Test
-    public void verifyVRARSolutions() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(2), driver);
-    }
-
-    @Test
-    public void verifyEnterpriseApplications() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(3), driver);
-    }
-
-    @Test
-    public void verifyCloudSolutions() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(4), driver);
-    }
-
-    @Test
-    public void verifyIoTSolution() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(5), driver);
     }
 
 }

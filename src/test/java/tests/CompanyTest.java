@@ -25,8 +25,18 @@ public class CompanyTest extends BaseTest{
     }
 
     @Test
-    public void verifyCareerMotto() {
+    public void verifyCompanyMotto() {
         Assert.assertEquals(companyPage.getCompanyMottoText(), TestData.COMPANY_MOTTO_TEXT);
+    }
+
+    @Test
+    public void verifyDisplayedStaff() {
+        Assert.assertEquals(companyPage.getStaffSlideSize(), 8);
+    }
+
+    //Test
+    public void verifyStaffInfo() {
+        companyPage.clickOnStaff(driver);
     }
 
 }

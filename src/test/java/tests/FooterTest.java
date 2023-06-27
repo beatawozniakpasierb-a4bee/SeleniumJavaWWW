@@ -3,11 +3,8 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.CompanyPage;
 import pages.FooterPage;
-import pages.UpperBarMenuPage;
 import utils.FooterData;
-import utils.TestData;
 
 public class FooterTest extends BaseTest {
 

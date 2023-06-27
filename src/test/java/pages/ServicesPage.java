@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,14 +35,12 @@ public class ServicesPage {
 
     public void selectOption(WebElement element, WebDriver driver) {
         element.click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        SeleniumHelper.scrollPage(driver);
         SeleniumHelper.waitForVisible(subMenuBar, driver);
         boolean displayed = subMenuBar.isDisplayed();
         if (displayed) {
             for (WebElement item:subMenuItems) {
                 item.click();
-                //System.out.println(item.getText());
             }
         }
     }
