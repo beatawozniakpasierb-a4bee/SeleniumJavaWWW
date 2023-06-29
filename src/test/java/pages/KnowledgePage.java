@@ -9,7 +9,11 @@ import utils.TestData;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class KnowledgePage {
+public class KnowledgePage extends BasePage {
+
+    public KnowledgePage(WebDriver driver) {
+        super(driver);
+    }
 
     public String knowledgeUrl = TestData.BASE_URL + "knowledge-hub/";
 
@@ -29,7 +33,4 @@ public class KnowledgePage {
                 .collect(Collectors.toList());
     }
 
-    public KnowledgePage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 }

@@ -3,13 +3,16 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class UpperBarMenuPage {
+public class UpperBarMenuPage extends BasePage{
+
+    public UpperBarMenuPage(WebDriver driver) {
+        super(driver);
+    }
 
     public WebDriver driver;
 
@@ -48,10 +51,6 @@ public class UpperBarMenuPage {
 
     @FindBy(xpath = "//a[@href='https://a4bee.com/eu-projects/']")
     WebElement menuEUProjects;
-
-    public UpperBarMenuPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 
     public void clickContactUsButton() {
         contactUsButton.click();

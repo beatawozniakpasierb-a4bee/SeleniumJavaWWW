@@ -9,7 +9,11 @@ import utils.TestData;
 
 import java.util.List;
 
-public class ServicesPage {
+public class ServicesPage extends BasePage {
+
+    public ServicesPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String servicesUrl = TestData.BASE_URL + "services/";
 
@@ -45,7 +49,4 @@ public class ServicesPage {
         } return new UpperBarMenuPage(driver);
     }
 
-    public ServicesPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 }

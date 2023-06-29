@@ -3,13 +3,16 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import utils.TestData;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CasesPage {
+public class CasesPage extends BasePage {
+
+    public CasesPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String casesUrl = TestData.BASE_URL + "cases/";
 
@@ -27,9 +30,5 @@ public class CasesPage {
         return listOfCaseStudies.stream()
                 .map(el -> el.getText())
                 .collect(Collectors.toList());
-    }
-
-    public CasesPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
     }
 }

@@ -6,7 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.TestData;
 
-public class EUProjectPage {
+public class EUProjectPage extends BasePage{
+
+    public EUProjectPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String euProjectUrl = TestData.BASE_URL + "eu-projects/";
 
@@ -18,7 +22,4 @@ public class EUProjectPage {
         return euProjectsMotto.getText().trim();
     }
 
-    public EUProjectPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 }

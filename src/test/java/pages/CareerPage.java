@@ -8,7 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 import utils.SeleniumHelper;
 import utils.TestData;
 
-public class CareerPage {
+public class CareerPage extends BasePage{
+
+    public CareerPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String careerUrl = TestData.BASE_URL + "career/";
 
@@ -109,9 +113,5 @@ public class CareerPage {
         acceptTerms.click();
         applyButton.click();
         return this;
-    }
-
-    public CareerPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
     }
 }

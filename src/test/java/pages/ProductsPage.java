@@ -6,7 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.TestData;
 
-public class ProductsPage {
+public class ProductsPage extends BasePage {
+
+    public ProductsPage(WebDriver driver) {
+        super(driver);
+    }
 
     public String productsUrl = TestData.BASE_URL + "products/";
 
@@ -17,7 +21,4 @@ public class ProductsPage {
         return productsMotto.getText().trim();
     }
 
-    public ProductsPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 }

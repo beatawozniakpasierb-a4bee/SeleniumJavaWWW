@@ -3,14 +3,16 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FooterPage {
+public class FooterPage extends BasePage{
 
-    public WebDriver driver;
+    public FooterPage(WebDriver driver){
+        super(driver);
+    }
+
 
     @FindBy(xpath = "//div[@class='footer--social-media']/a")
     private List<WebElement> listOfSocialMedia;
@@ -26,7 +28,4 @@ public class FooterPage {
         return listOfSocialMedia.stream().map(el -> el.getAccessibleName()).collect(Collectors.toList());
     }
 
-    public FooterPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 }

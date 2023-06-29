@@ -8,7 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class HomePage {
+public class HomePage extends BasePage {
+
+    public HomePage(WebDriver driver) {
+        super(driver);
+    }
 
     @FindBy(xpath = "//input[@placeholder='Name']")
     private WebElement nameInput;
@@ -91,10 +95,6 @@ public class HomePage {
 
     public String getMessageSentText() {
         return messageSentInfo.getText();
-    }
-
-    public HomePage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
     }
 
 }

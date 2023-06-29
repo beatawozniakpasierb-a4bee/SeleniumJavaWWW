@@ -12,7 +12,7 @@ import utils.TestData;
 import java.util.concurrent.TimeUnit;
 
 
-public class BaseTest {
+public abstract class BaseTest {
 
     protected WebDriver driver;
 
