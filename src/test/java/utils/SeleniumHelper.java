@@ -11,13 +11,18 @@ import java.time.Duration;
 public class SeleniumHelper {
 
     public static void waitForClickable(WebElement element, WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static void waitForVisible(WebElement element, WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void waitForAttribute(WebElement element, WebDriver driver, String attribute, String value) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.attributeToBe(element, attribute, value));
     }
 
     public static void scrollPage(WebDriver driver) {

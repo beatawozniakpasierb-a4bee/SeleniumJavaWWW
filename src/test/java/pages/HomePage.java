@@ -33,8 +33,14 @@ public class HomePage {
 
     @FindBy(className = "lets-talk-box--plus")
     public WebElement letsTalkBox;
+
     @FindBy(xpath = "//div[@class='contact-us']/button[@type='button']")
     public WebElement contactUsButton;
+
+    public HomePage clickContactUs(){
+        contactUsButton.click();
+        return this;
+    }
 
     public WebElement getMessageSentInfo() {
         return messageSentInfo;

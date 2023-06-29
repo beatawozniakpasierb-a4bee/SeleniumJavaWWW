@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.CompanyPage;
 import pages.UpperBarMenuPage;
@@ -21,7 +22,7 @@ public class CompanyTest extends BaseTest{
 
     @Test
     public void verifyCompanyUrl() {
-        upperBarMenuPage.verifyUrl(driver, companyPage.companyUrl);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuCompany().companyUrl);
     }
 
     @Test
@@ -34,9 +35,10 @@ public class CompanyTest extends BaseTest{
         Assert.assertEquals(companyPage.getStaffSlideSize(), 8);
     }
 
-    //Test
+    @Test @Ignore
     public void verifyStaffInfo() {
-        companyPage.clickOnStaff(driver);
+        companyPage.clickOnStaff();
+        Assert.assertTrue(companyPage.clickOnStaff().contains("@a4bee.com"));
     }
 
 }

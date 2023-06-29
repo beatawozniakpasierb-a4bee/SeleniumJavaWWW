@@ -20,8 +20,7 @@ public class HomePageTest extends BaseTest {
 
     @Test
     public void sendBlankContactForm() {
-        homePage.contactUsButton.click();
-        homePage.sendForm();
+        homePage.clickContactUs().sendForm();
         Assert.assertEquals(homePage.getInputErrors(), 3);
     }
 
@@ -47,9 +46,8 @@ public class HomePageTest extends BaseTest {
 
     //@Test
     public void sendContactForm2() {
-        homePage.contactUsButton.click();
         ContactDetails contactDetails = new ContactDetails();
-        homePage.fillContactForm2(contactDetails);
+        homePage.clickContactUs().fillContactForm2(contactDetails);
     }
 
 }

@@ -1,5 +1,6 @@
 package pages;
 
+import dev.failsafe.internal.util.DelegatingScheduler;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -74,31 +75,40 @@ public class CareerPage {
     }
     public String getCareerMottoText() {return careerMotto.getText().trim();}
 
-    public void clickOnCareerItem() {
+    public CareerPage clickOnCareerItem() {
         careerItem.click();
+        return this;
     }
 
     public String getTitle(WebElement element) {
         return element.getText();
     }
 
-    public void verifyElements() {
-        uploadCVButton.isDisplayed();
-        listOfRequirements.isDisplayed();
-        benefits.isDisplayed();
-        applyButton.isDisplayed();
+    public Boolean verifyElements() {
+        if ((uploadCVButton.isDisplayed() &&
+        listOfRequirements.isDisplayed() &&
+        benefits.isDisplayed()&&
+        applyButton.isDisplayed())) {
+            return true;
+        } else {
+            return false;
+        }
+
+
     }
 
-    public void sendCV(String email, String cvPath){
+    public CareerPage sendCV(String email, String cvPath){
         offerEmail.sendKeys(email);
         offerCV.sendKeys(cvPath);
         acceptTerms.click();
         applyButton.click();
+        return this;
     }
-    public void sendNoCV(String email){
+    public CareerPage sendNoCV(String email){
         offerEmail.sendKeys(email);
         acceptTerms.click();
         applyButton.click();
+        return this;
     }
 
     public CareerPage(WebDriver driver) {

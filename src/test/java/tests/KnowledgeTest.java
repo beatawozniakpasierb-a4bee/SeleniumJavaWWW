@@ -23,7 +23,7 @@ public class KnowledgeTest extends BaseTest {
 
     @Test
     public void verifyKnowledgeUrl() {
-        upperBarMenuPage.verifyUrl(driver, knowledgePage.knowledgeUrl);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuKnowledge().knowledgeUrl);
     }
 
     @Test

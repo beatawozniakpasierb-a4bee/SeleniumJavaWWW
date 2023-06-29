@@ -61,32 +61,39 @@ public class UpperBarMenuPage {
         return brand.isDisplayed();
     }
 
-    public void clickOnMenuServices() {
+    public ServicesPage clickOnMenuServices() {
         menuServices.click();
+        return new ServicesPage(driver);
     }
 
-    public void clickOnMenuProducts() {
+    public ProductsPage clickOnMenuProducts() {
         menuProducts.click();
+        return new ProductsPage(driver);
     }
 
-    public void clickOnMenuCareer() {
+    public CareerPage clickOnMenuCareer() {
         menuCareer.click();
+        return new CareerPage(driver);
     }
 
-    public void clickOnMenuKnowledge() {
+    public KnowledgePage clickOnMenuKnowledge() {
         menuKnowledge.click();
+        return new KnowledgePage(driver);
     }
 
-    public void clickOnMenuCases() {
+    public CasesPage clickOnMenuCases() {
         menuCases.click();
+        return new CasesPage(driver);
     }
 
-    public void clickOnMenuCompany() {
+    public CompanyPage clickOnMenuCompany() {
         menuCompany.click();
+        return new CompanyPage(driver);
     }
 
-    public void clickOnMenuEUProjects() {
+    public EUProjectPage clickOnMenuEUProjects() {
         menuEUProjects.click();
+        return new EUProjectPage(driver);
     }
 
     public void verifyUrl(WebDriver driver, String expectedUrl) {

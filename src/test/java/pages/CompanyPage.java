@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.SeleniumHelper;
@@ -30,8 +29,9 @@ public class CompanyPage {
     @FindBy(xpath = "//div[contains(@class,'bio-modal--close')]")
     WebElement closeStaffModal;
 
-    @FindBy(xpath = "//button[@id='tech_hive--prev']")
-    WebElement nextButtonStaff;
+    public WebElement getStaffEmail() {
+        return staffEmail;
+    }
 
     public List<String> getStaffRoles() {
         return staffNamesSlide.stream()
@@ -46,20 +46,17 @@ public class CompanyPage {
 
     public Integer getStaffSlideSize() { return staffSlide.size();}
 
-    public void clickOnStaff(WebDriver driver) {
+    public String clickOnStaff() {
         int i = 1;
-        while (i<getStaffSlideSize()) {
+        String email = null;
+        while (i < 4) {
             staffSlide.get(i).click();
-            System.out.println(staffEmail.getText());
+            email = staffEmail.getText();
             closeStaffModal.click();
-            if (i>3) {
-                SeleniumHelper.waitForClickable(nextButtonStaff, driver);
-                nextButtonStaff.click();
-            }
             i++;
         }
+        return email;
     }
-
 
     public CompanyPage(WebDriver driver) {
         PageFactory.initElements(driver, this);

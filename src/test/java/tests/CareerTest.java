@@ -22,7 +22,7 @@ public class CareerTest extends BaseTest {
 
     @Test
     public void verifyCareerUrl() {
-        upperBarMenuPage.verifyUrl(driver, careerPage.careerUrl);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuCareer().careerUrl);
     }
 
     @Test
@@ -41,28 +41,25 @@ public class CareerTest extends BaseTest {
     @Test
     public void verifyOfferElements() {
         careerPage.clickOnCareerItem();
-        careerPage.verifyElements();
+        Assert.assertTrue(careerPage.verifyElements());
     }
 
     @Test
     public void applyForAJob() {
-        careerPage.clickOnCareerItem();
-        careerPage.sendCV(TestData.VALID_EMAIL, TestData.PATH_TO_CV);
+        careerPage.clickOnCareerItem().sendCV(TestData.VALID_EMAIL, TestData.PATH_TO_CV);
         SeleniumHelper.waitForVisible(careerPage.getApplicationSent(), driver);
         Assert.assertTrue(careerPage.getApplicationSent().isDisplayed());
     }
 
     @Test
     public void applyForAJobInvalidEmail() {
-        careerPage.clickOnCareerItem();
-        careerPage.sendCV(TestData.INVALID_EMAIL, TestData.PATH_TO_CV);
+        careerPage.clickOnCareerItem().sendCV(TestData.INVALID_EMAIL, TestData.PATH_TO_CV);
         Assert.assertTrue(careerPage.getEmailError().isDisplayed());
     }
 
     @Test
     public void applyForAJobNoCV() {
-        careerPage.clickOnCareerItem();
-        careerPage.sendNoCV(TestData.VALID_EMAIL);
+        careerPage.clickOnCareerItem().sendNoCV(TestData.VALID_EMAIL);
         Assert.assertTrue(careerPage.getCvError().isDisplayed());
     }
 }

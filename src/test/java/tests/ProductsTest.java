@@ -20,7 +20,7 @@ public class ProductsTest extends BaseTest {
 
     @Test
     public void verifyProductsUrl() {
-        upperBarMenuPage.verifyUrl(driver, productsPage.productsUrl);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuProducts().productsUrl);
     }
 
     @Test

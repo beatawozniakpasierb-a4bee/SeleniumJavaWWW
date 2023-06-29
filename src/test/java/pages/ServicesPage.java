@@ -23,7 +23,7 @@ public class ServicesPage {
     WebElement subMenuBar;
 
     @FindBy(xpath = "//div[@id='submenu-bar']/div")
-    List<WebElement> subMenuItems;
+    public List<WebElement> subMenuItems;
 
     public List<WebElement> getListOfOptions() {
         return listOfOptions;
@@ -33,7 +33,7 @@ public class ServicesPage {
         return servicesMotto.getText().trim();
     }
 
-    public void selectOption(WebElement element, WebDriver driver) {
+    public UpperBarMenuPage selectOption(WebElement element, WebDriver driver) {
         element.click();
         SeleniumHelper.scrollPage(driver);
         SeleniumHelper.waitForVisible(subMenuBar, driver);
@@ -42,7 +42,7 @@ public class ServicesPage {
             for (WebElement item:subMenuItems) {
                 item.click();
             }
-        }
+        } return new UpperBarMenuPage(driver);
     }
 
     public ServicesPage(WebDriver driver) {

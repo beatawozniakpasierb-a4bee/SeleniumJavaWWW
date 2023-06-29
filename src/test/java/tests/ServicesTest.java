@@ -27,23 +27,17 @@ public class ServicesTest extends BaseTest {
 
     @Test
     public void verifyServicesUrl() {
-        upperBarMenuPage.verifyUrl(driver, servicesPage.servicesUrl);
-    }
-
-    //@Test
-    public void verifySecurityAssessment() {
-        servicesPage.selectOption(servicesPage.getListOfOptions().get(0), driver);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuServices().servicesUrl);
     }
 
     @Test
     public void verifyEachService() {
         int i=0;
         while(i<servicesPage.getListOfOptions().size()) {
-            servicesPage.selectOption(servicesPage.getListOfOptions().get(i), driver);
-            upperBarMenuPage.clickOnMenuServices();
+            servicesPage.selectOption(servicesPage.getListOfOptions().get(i), driver).clickOnMenuServices();
             i++;
         }
-
+        Assert.assertTrue(servicesPage.subMenuItems.isEmpty());
     }
 
 }

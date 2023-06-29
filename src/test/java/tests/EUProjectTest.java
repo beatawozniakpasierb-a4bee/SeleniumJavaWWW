@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.EUProjectPage;
 import pages.UpperBarMenuPage;
@@ -19,9 +20,9 @@ public class EUProjectTest extends BaseTest{
         upperBarMenuPage.clickOnMenuEUProjects();
     }
 
-    //@Test
+    @Test @Ignore
     public void verifyEUProjectUrl() {
-        upperBarMenuPage.verifyUrl(driver, euProjectPage.euProjectUrl);
+        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuEUProjects().euProjectUrl);
     }
 
     @Test
