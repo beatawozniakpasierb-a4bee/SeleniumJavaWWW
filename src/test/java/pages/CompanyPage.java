@@ -6,12 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import utils.TestData;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CompanyPage extends BasePage {
 
+    public UpperBarMenuPage upperBarMenuPage;
+
     public CompanyPage(WebDriver driver) {
         super(driver);
+        upperBarMenuPage = new UpperBarMenuPage(driver);
     }
 
     public String companyUrl = TestData.BASE_URL + "company/";
@@ -33,13 +35,6 @@ public class CompanyPage extends BasePage {
 
     public WebElement getStaffEmail() {
         return staffEmail;
-    }
-
-    public List<String> getStaffRoles() {
-        return staffNamesSlide.stream()
-                .map(el -> el.getText())
-                .filter(el -> !el.isEmpty())
-                .collect(Collectors.toList());
     }
 
     public String getCompanyMottoText() {

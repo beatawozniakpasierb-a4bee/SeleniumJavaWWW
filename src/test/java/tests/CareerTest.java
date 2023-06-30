@@ -4,25 +4,22 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CareerPage;
-import pages.UpperBarMenuPage;
 import utils.SeleniumHelper;
 import utils.TestData;
 
 public class CareerTest extends BaseTest {
 
     private CareerPage careerPage;
-    private UpperBarMenuPage upperBarMenuPage;
 
     @BeforeMethod
     public void setUpPage() {
-        upperBarMenuPage = new UpperBarMenuPage(driver);
         careerPage = new CareerPage(driver);
-        upperBarMenuPage.clickOnMenuCareer();
+        careerPage.upperBarMenuPage.clickOnMenuCareer();
     }
 
     @Test
     public void verifyCareerUrl() {
-        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuCareer().careerUrl);
+        careerPage.upperBarMenuPage.verifyUrl(driver, careerPage.upperBarMenuPage.clickOnMenuCareer().careerUrl);
     }
 
     @Test

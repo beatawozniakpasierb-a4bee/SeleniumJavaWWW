@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import utils.TestData;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.stream.Collectors;
 
 public class KnowledgePage extends BasePage {
 
+    public UpperBarMenuPage upperBarMenuPage;
+
     public KnowledgePage(WebDriver driver) {
         super(driver);
+        upperBarMenuPage = new UpperBarMenuPage(driver);
     }
 
     public String knowledgeUrl = TestData.BASE_URL + "knowledge-hub/";

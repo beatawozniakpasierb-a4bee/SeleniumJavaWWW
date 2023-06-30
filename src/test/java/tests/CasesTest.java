@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CasesPage;
-import pages.UpperBarMenuPage;
 import utils.TestData;
 
 import java.util.List;
@@ -12,18 +11,16 @@ import java.util.List;
 public class CasesTest extends BaseTest {
 
     private CasesPage casesPage;
-    private UpperBarMenuPage upperBarMenuPage;
 
     @BeforeMethod
     public void setUpPage() {
-        upperBarMenuPage = new UpperBarMenuPage(driver);
         casesPage = new CasesPage(driver);
-        upperBarMenuPage.clickOnMenuCases();
+        casesPage.upperBarMenuPage.clickOnMenuCases();
     }
 
     @Test
     public void verifyCasesUrl() {
-        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuCases().casesUrl);
+        casesPage.upperBarMenuPage.verifyUrl(driver, casesPage.upperBarMenuPage.clickOnMenuCases().casesUrl);
     }
 
     @Test

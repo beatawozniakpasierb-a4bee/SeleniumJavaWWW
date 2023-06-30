@@ -4,20 +4,17 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.ServicesPage;
-import pages.UpperBarMenuPage;
 import utils.TestData;
 
 
 public class ServicesTest extends BaseTest {
 
     private ServicesPage servicesPage;
-    private UpperBarMenuPage upperBarMenuPage;
 
     @BeforeMethod
     public void setUpPage() {
-        upperBarMenuPage = new UpperBarMenuPage(driver);
         servicesPage = new ServicesPage(driver);
-        upperBarMenuPage.clickOnMenuServices();
+        servicesPage.upperBarMenuPage.clickOnMenuServices();
     }
 
     @Test
@@ -27,7 +24,7 @@ public class ServicesTest extends BaseTest {
 
     @Test
     public void verifyServicesUrl() {
-        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuServices().servicesUrl);
+        servicesPage.upperBarMenuPage.verifyUrl(driver, servicesPage.upperBarMenuPage.clickOnMenuServices().servicesUrl);
     }
 
     @Test

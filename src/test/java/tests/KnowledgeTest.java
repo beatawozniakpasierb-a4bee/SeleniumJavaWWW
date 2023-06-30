@@ -4,26 +4,23 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.KnowledgePage;
-import pages.UpperBarMenuPage;
 import utils.TestData;
 
 import java.util.List;
 
 public class KnowledgeTest extends BaseTest {
 
-    private UpperBarMenuPage upperBarMenuPage;
     private KnowledgePage knowledgePage;
 
     @BeforeMethod
     public void setUpPage() {
-        upperBarMenuPage = new UpperBarMenuPage(driver);
         knowledgePage = new KnowledgePage(driver);
-        upperBarMenuPage.clickOnMenuKnowledge();
+        knowledgePage.upperBarMenuPage.clickOnMenuKnowledge();
     }
 
     @Test
     public void verifyKnowledgeUrl() {
-        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuKnowledge().knowledgeUrl);
+        knowledgePage.upperBarMenuPage.verifyUrl(driver, knowledgePage.upperBarMenuPage.clickOnMenuKnowledge().knowledgeUrl);
     }
 
     @Test

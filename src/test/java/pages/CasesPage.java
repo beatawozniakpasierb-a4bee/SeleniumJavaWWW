@@ -10,8 +10,11 @@ import java.util.stream.Collectors;
 
 public class CasesPage extends BasePage {
 
+    public UpperBarMenuPage upperBarMenuPage;
+
     public CasesPage(WebDriver driver) {
         super(driver);
+        upperBarMenuPage = new UpperBarMenuPage(driver);
     }
 
     public String casesUrl = TestData.BASE_URL + "cases/";

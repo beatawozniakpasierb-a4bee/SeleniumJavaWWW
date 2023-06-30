@@ -5,24 +5,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.CompanyPage;
-import pages.UpperBarMenuPage;
 import utils.TestData;
 
 public class CompanyTest extends BaseTest{
 
     private CompanyPage companyPage;
-    private UpperBarMenuPage upperBarMenuPage;
 
     @BeforeMethod
     public void setUpPage() {
-        upperBarMenuPage = new UpperBarMenuPage(driver);
         companyPage = new CompanyPage(driver);
-        upperBarMenuPage.clickOnMenuCompany();
+        companyPage.upperBarMenuPage.clickOnMenuCompany();
     }
 
     @Test
     public void verifyCompanyUrl() {
-        upperBarMenuPage.verifyUrl(driver, upperBarMenuPage.clickOnMenuCompany().companyUrl);
+        companyPage.upperBarMenuPage.verifyUrl(driver, companyPage.upperBarMenuPage.clickOnMenuCompany().companyUrl);
     }
 
     @Test

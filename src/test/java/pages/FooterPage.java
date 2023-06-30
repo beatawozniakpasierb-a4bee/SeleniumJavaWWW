@@ -18,7 +18,7 @@ public class FooterPage extends BasePage{
     private List<WebElement> listOfSocialMedia;
 
     @FindBy(xpath = "//p[@class='address-caption mb-1']")
-    List<WebElement> addressFooter;
+    private List<WebElement> addressFooter;
 
     public List<String> getFooterAddress() {
         return addressFooter.stream().map(el -> el.getText()).collect(Collectors.toList());
