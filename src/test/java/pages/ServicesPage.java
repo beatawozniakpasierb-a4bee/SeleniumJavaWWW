@@ -22,13 +22,13 @@ public class ServicesPage extends BasePage {
     public String servicesUrl = TestData.BASE_URL + "services/";
 
     @FindBy(xpath = "//div[@class='col-lg-5']/h4")
-    WebElement servicesMotto;
+    private WebElement servicesMotto;
 
     @FindBy(xpath = "//a[contains(@class,'arrow-right')]/h5")
-    List<WebElement> listOfOptions;
+    private List<WebElement> listOfOptions;
 
     @FindBy(id = "submenu-bar")
-    WebElement subMenuBar;
+    private WebElement subMenuBar;
 
     @FindBy(xpath = "//div[@id='submenu-bar']/div")
     public List<WebElement> subMenuItems;

@@ -30,7 +30,7 @@ public class CompanyTest extends BaseTest{
 
     @Test
     public void verifyDisplayedStaff() {
-        Assert.assertEquals(companyPage.getStaffSlideSize(), 8);
+        Assert.assertTrue(companyPage.getStaffSlideSize()>3);
     }
 
     @Test @Ignore

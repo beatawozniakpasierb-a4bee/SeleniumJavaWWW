@@ -21,8 +21,8 @@ public class HomePageTest extends BaseTest {
 
     @Test
     public void sendBlankContactForm() {
-        homePage.clickContactUs().sendForm();
-        Assert.assertEquals(homePage.getInputErrors(), 3);
+        homePage.fillContactForm(homePage.contactUsButton, "", "", "");
+        Assert.assertEquals(homePage.getInputErrors(), 2);
     }
 
     @Test

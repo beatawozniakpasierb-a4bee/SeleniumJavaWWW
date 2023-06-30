@@ -22,10 +22,10 @@ public class KnowledgePage extends BasePage {
     public String knowledgeUrl = TestData.BASE_URL + "knowledge-hub/";
 
     @FindBy(xpath = "//p[contains(@class,'text-p-responsive')]")
-    WebElement knowledgeMotto;
+    private WebElement knowledgeMotto;
 
     @FindBy(xpath = "//div[@class='article-box--info']")
-    List<WebElement> listOfArticles;
+    private List<WebElement> listOfArticles;
 
     public String getKnowledgeMottoText() {
         return knowledgeMotto.getText().trim();

@@ -14,10 +14,35 @@ public class UpperBarMenuPage extends BasePage{
         super(driver);
     }
 
-    public WebDriver driver;
-
     @FindBy(xpath = "//li[contains(@id,'menu-item-')]")
-    List<WebElement> menuItems;
+    private List<WebElement> menuItems;
+
+    @FindBy(xpath = "//div[@id='brand']")
+    private WebElement brand;
+
+    @FindBy(id = "menu-item-445")
+    private WebElement menuServices;
+
+    @FindBy(id = "menu-item-695")
+    private WebElement menuProducts;
+
+    @FindBy(id = "menu-item-442")
+    private WebElement menuCareer;
+
+    @FindBy(id = "menu-item-1042")
+    private WebElement menuKnowledge;
+
+    @FindBy(id = "menu-item-443")
+    private WebElement menuCases;
+
+    @FindBy(id = "menu-item-444")
+    private WebElement menuCompany;
+
+    @FindBy(xpath = "//div[@class='contact-us']/button[@type='button']")
+    private WebElement contactUsButton;
+
+    @FindBy(xpath = "//a[@href='https://a4bee.com/eu-projects/']")
+    private WebElement menuEUProjects;
 
     public List<String> getMenuItemsNames() {
         return menuItems.stream()
@@ -25,36 +50,9 @@ public class UpperBarMenuPage extends BasePage{
                 .collect(Collectors.toList());
     }
 
-    @FindBy(xpath = "//div[@id='brand']")
-    WebElement brand;
-
-    @FindBy(id = "menu-item-445")
-    WebElement menuServices;
-
-    @FindBy(id = "menu-item-695")
-    WebElement menuProducts;
-
-    @FindBy(id = "menu-item-442")
-    WebElement menuCareer;
-
-    @FindBy(id = "menu-item-1042")
-    WebElement menuKnowledge;
-
-    @FindBy(id = "menu-item-443")
-    WebElement menuCases;
-
-    @FindBy(id = "menu-item-444")
-    WebElement menuCompany;
-
-    @FindBy(xpath = "//div[@class='contact-us']/button[@type='button']")
-    WebElement contactUsButton;
-
-    @FindBy(xpath = "//a[@href='https://a4bee.com/eu-projects/']")
-    WebElement menuEUProjects;
-
-    public void clickContactUsButton() {
-        contactUsButton.click();
-    }
+    //public void clickContactUsButton() {
+     //   contactUsButton.click();
+    //}
 
     public Boolean brandIsDisplayed() {
         return brand.isDisplayed();

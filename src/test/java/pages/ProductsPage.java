@@ -20,7 +20,7 @@ public class ProductsPage extends BasePage {
     public String productsUrl = TestData.BASE_URL + "products/";
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
-    WebElement productsMotto;
+    private WebElement productsMotto;
 
     public String getProductsMottoText() {
         return productsMotto.getText().trim();

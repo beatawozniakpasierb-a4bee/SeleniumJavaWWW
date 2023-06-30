@@ -33,10 +33,10 @@ public class HomePage extends BasePage {
     private WebElement acceptTerms;
 
     @FindBy(xpath = "//input[contains(@class,'error')]")
-    List<WebElement> inputErrors;
+    private List<WebElement> inputErrors;
 
     @FindBy(xpath = "//h4[@class='my-4']")
-    public WebElement messageSentInfo;
+    private WebElement messageSentInfo;
 
     @FindBy(className = "lets-talk-box--plus")
     public WebElement letsTalkBox;

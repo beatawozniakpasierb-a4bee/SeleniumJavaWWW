@@ -22,19 +22,19 @@ public class CompanyPage extends BasePage {
     public String companyUrl = TestData.BASE_URL + "company/";
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
-    WebElement companyMotto;
+    private WebElement companyMotto;
 
     @FindBy(xpath = "//div[contains(@class,'tns-slide-active')]")
-    List<WebElement> staffSlide;
+    private List<WebElement> staffSlide;
 
     @FindBy(xpath = "//div[@class='hr-item--info']/p")
-    List<WebElement> staffNamesSlide;
+    private List<WebElement> staffNamesSlide;
 
     @FindBy(xpath = "//a[contains(@href,'@a4bee.com')]")
-    WebElement staffEmail;
+    private WebElement staffEmail;
 
     @FindBy(xpath = "//div[contains(@class,'bio-modal--close')]")
-    WebElement closeStaffModal;
+    private WebElement closeStaffModal;
 
     public WebElement getStaffEmail() {
         return staffEmail;

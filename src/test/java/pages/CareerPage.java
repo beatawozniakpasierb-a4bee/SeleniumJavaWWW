@@ -22,46 +22,46 @@ public class CareerPage extends BasePage{
     public String careerUrl = TestData.BASE_URL + "career/";
 
     @FindBy(xpath = "//div[@class='col-lg-10']/h4")
-    WebElement careerMotto;
+    private WebElement careerMotto;
 
     @FindBy(xpath = "//div[contains(@class,'offer-show')]")
-    WebElement careerItem;
+    private WebElement careerItem;
 
     @FindBy(xpath = "//div[@class='career-item-title']/h4")
-    WebElement careerTitle;
+    private WebElement careerTitle;
 
     @FindBy(xpath = "//div[@class='offer-modal--title']/h4")
-    WebElement careerTitleInJobOffer;
+    private WebElement careerTitleInJobOffer;
 
     @FindBy(xpath = "//label[contains(text(),'CV')]")
-    WebElement uploadCVButton;
+    private WebElement uploadCVButton;
 
     @FindBy(xpath = "//ul[contains(@class,'list-textSecondary')]")
-    WebElement listOfRequirements;
+    private WebElement listOfRequirements;
 
     @FindBy(xpath = "//div[@class='offer-modal--benefits']")
-    WebElement benefits;
+    private WebElement benefits;
 
     @FindBy(xpath = "//button[contains(text(),'Apply')]")
-    WebElement applyButton;
+    private WebElement applyButton;
 
     @FindBy(xpath="//input[@name='offer-email']")
-    WebElement offerEmail;
+    private WebElement offerEmail;
 
     @FindBy(name="offer-cv")
-    WebElement offerCV;
+    private WebElement offerCV;
 
     @FindBy(xpath = "//label[@for='offer-regulamin-1']")
-    WebElement acceptTerms;
+    private WebElement acceptTerms;
 
     @FindBy(xpath="//h4[contains(text(),'Your application has been sent')]")
-    WebElement applicationSent;
+    private WebElement applicationSent;
 
     @FindBy(xpath = "//div[@class='offer-modal--cv-dropzone error']")
-    WebElement cvError;
+    private WebElement cvError;
 
     @FindBy(xpath = "//input[contains(@class,'error')]")
-    WebElement emailError;
+    private WebElement emailError;
 
     public WebElement getCvError() {
         return cvError;
