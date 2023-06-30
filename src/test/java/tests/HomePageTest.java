@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import utils.FooterData;
 import utils.SeleniumHelper;
 import utils.TestData;
 
@@ -48,6 +49,16 @@ public class HomePageTest extends BaseTest {
     public void sendContactForm2() {
         ContactDetails contactDetails = new ContactDetails();
         homePage.clickContactUs().fillContactForm2(contactDetails);
+    }
+
+    @Test
+    public void verifyFooterAddress() {
+        Assert.assertEquals(homePage.footer.getFooterAddress(), FooterData.getListOfCompanyNames());
+    }
+
+    @Test
+    public void socialMediaLinksAreDisplayed() {
+        Assert.assertEquals(homePage.footer.getListOfSocialMediaLinks(), FooterData.getListOfSocialMedia());
     }
 
 }

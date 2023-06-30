@@ -9,10 +9,12 @@ import utils.TestData;
 public class ProductsPage extends BasePage {
 
     public UpperBarMenuPage upperBarMenuPage;
+    public FooterPage footer;
 
     public ProductsPage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);
+        footer = new FooterPage(driver);
     }
 
     public String productsUrl = TestData.BASE_URL + "products/";

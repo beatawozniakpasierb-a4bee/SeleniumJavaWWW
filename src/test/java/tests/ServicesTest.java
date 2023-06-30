@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.ServicesPage;
+import utils.FooterData;
 import utils.TestData;
 
 
@@ -35,6 +36,15 @@ public class ServicesTest extends BaseTest {
             i++;
         }
         Assert.assertTrue(servicesPage.subMenuItems.isEmpty());
+    }
+    @Test
+    public void verifyFooterAddress() {
+        Assert.assertEquals(servicesPage.footer.getFooterAddress(), FooterData.getListOfCompanyNames());
+    }
+
+    @Test
+    public void socialMediaLinksAreDisplayed() {
+        Assert.assertEquals(servicesPage.footer.getListOfSocialMediaLinks(), FooterData.getListOfSocialMedia());
     }
 
 }

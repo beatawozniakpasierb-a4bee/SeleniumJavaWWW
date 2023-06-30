@@ -10,8 +10,11 @@ import java.util.List;
 
 public class HomePage extends BasePage {
 
+    public FooterPage footer;
+
     public HomePage(WebDriver driver) {
         super(driver);
+        footer = new FooterPage(driver);
     }
 
     @FindBy(xpath = "//input[@placeholder='Name']")

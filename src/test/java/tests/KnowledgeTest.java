@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.KnowledgePage;
+import utils.FooterData;
 import utils.TestData;
 
 import java.util.List;
@@ -32,6 +33,15 @@ public class KnowledgeTest extends BaseTest {
     public void verifyListOfArticles() {
         List<String> articleNames = knowledgePage.getListOfArticles();
         Assert.assertTrue(articleNames.size() > 6);
+    }
+    @Test
+    public void verifyFooterAddress() {
+        Assert.assertEquals(knowledgePage.footer.getFooterAddress(), FooterData.getListOfCompanyNames());
+    }
+
+    @Test
+    public void socialMediaLinksAreDisplayed() {
+        Assert.assertEquals(knowledgePage.footer.getListOfSocialMediaLinks(), FooterData.getListOfSocialMedia());
     }
 
 }

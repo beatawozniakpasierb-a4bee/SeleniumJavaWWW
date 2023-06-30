@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import utils.SeleniumHelper;
 import utils.TestData;
 
@@ -12,10 +11,12 @@ import java.util.List;
 public class ServicesPage extends BasePage {
 
     public UpperBarMenuPage upperBarMenuPage;
+    public FooterPage footer;
 
     public ServicesPage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);
+        footer = new FooterPage(driver);
     }
 
     public String servicesUrl = TestData.BASE_URL + "services/";

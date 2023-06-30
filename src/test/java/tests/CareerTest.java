@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CareerPage;
+import utils.FooterData;
 import utils.SeleniumHelper;
 import utils.TestData;
 
@@ -58,5 +59,15 @@ public class CareerTest extends BaseTest {
     public void applyForAJobNoCV() {
         careerPage.clickOnCareerItem().sendNoCV(TestData.VALID_EMAIL);
         Assert.assertTrue(careerPage.getCvError().isDisplayed());
+    }
+
+    @Test
+    public void verifyFooterAddress() {
+        Assert.assertEquals(careerPage.footer.getFooterAddress(), FooterData.getListOfCompanyNames());
+    }
+
+    @Test
+    public void socialMediaLinksAreDisplayed() {
+        Assert.assertEquals(careerPage.footer.getListOfSocialMediaLinks(), FooterData.getListOfSocialMedia());
     }
 }

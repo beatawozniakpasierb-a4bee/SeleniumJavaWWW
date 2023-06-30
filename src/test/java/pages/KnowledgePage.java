@@ -11,10 +11,12 @@ import java.util.stream.Collectors;
 public class KnowledgePage extends BasePage {
 
     public UpperBarMenuPage upperBarMenuPage;
+    public FooterPage footer;
 
     public KnowledgePage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);
+        footer = new FooterPage(driver);
     }
 
     public String knowledgeUrl = TestData.BASE_URL + "knowledge-hub/";
