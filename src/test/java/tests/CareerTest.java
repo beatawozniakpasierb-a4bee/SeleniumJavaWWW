@@ -20,7 +20,7 @@ public class CareerTest extends BaseTest {
 
     @Test
     public void verifyCareerUrl() {
-        careerPage.upperBarMenuPage.verifyUrl(driver, careerPage.upperBarMenuPage.clickOnMenuCareer().careerUrl);
+        careerPage.verifyUrl(driver, careerPage.upperBarMenuPage.clickOnMenuCareer().careerUrl);
     }
 
     @Test

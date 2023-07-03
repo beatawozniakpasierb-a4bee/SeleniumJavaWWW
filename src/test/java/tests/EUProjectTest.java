@@ -20,7 +20,7 @@ public class EUProjectTest extends BaseTest{
 
     @Test @Ignore
     public void verifyEUProjectUrl() {
-        euProjectPage.upperBarMenuPage.verifyUrl(driver, euProjectPage.upperBarMenuPage.clickOnMenuEUProjects().euProjectUrl);
+        euProjectPage.verifyUrl(driver, euProjectPage.upperBarMenuPage.clickOnMenuEUProjects().euProjectUrl);
     }
 
     @Test

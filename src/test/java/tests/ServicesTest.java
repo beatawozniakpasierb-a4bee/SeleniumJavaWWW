@@ -25,7 +25,7 @@ public class ServicesTest extends BaseTest {
 
     @Test
     public void verifyServicesUrl() {
-        servicesPage.upperBarMenuPage.verifyUrl(driver, servicesPage.upperBarMenuPage.clickOnMenuServices().servicesUrl);
+        servicesPage.verifyUrl(driver, servicesPage.upperBarMenuPage.clickOnMenuServices().servicesUrl);
     }
 
     @Test

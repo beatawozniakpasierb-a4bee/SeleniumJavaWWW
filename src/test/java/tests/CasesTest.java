@@ -21,7 +21,7 @@ public class CasesTest extends BaseTest {
 
     @Test
     public void verifyCasesUrl() {
-        casesPage.upperBarMenuPage.verifyUrl(driver, casesPage.upperBarMenuPage.clickOnMenuCases().casesUrl);
+        casesPage.verifyUrl(driver, casesPage.upperBarMenuPage.clickOnMenuCases().casesUrl);
     }
 
     @Test

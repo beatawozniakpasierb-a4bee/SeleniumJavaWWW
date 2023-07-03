@@ -20,7 +20,7 @@ public class CompanyTest extends BaseTest{
 
     @Test
     public void verifyCompanyUrl() {
-        companyPage.upperBarMenuPage.verifyUrl(driver, companyPage.upperBarMenuPage.clickOnMenuCompany().companyUrl);
+        companyPage.verifyUrl(driver, companyPage.upperBarMenuPage.clickOnMenuCompany().companyUrl);
     }
 
     @Test

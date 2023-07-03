@@ -93,9 +93,5 @@ public class UpperBarMenuPage extends BasePage{
         return new EUProjectPage(driver);
     }
 
-    public void verifyUrl(WebDriver driver, String expectedUrl) {
-        Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
-    }
-
 }
 
