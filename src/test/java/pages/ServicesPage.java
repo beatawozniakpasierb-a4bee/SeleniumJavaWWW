@@ -10,9 +10,6 @@ import java.util.List;
 
 public class ServicesPage extends BasePage {
 
-    public UpperBarMenuPage upperBarMenuPage;
-    public FooterPage footer;
-
     public ServicesPage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);

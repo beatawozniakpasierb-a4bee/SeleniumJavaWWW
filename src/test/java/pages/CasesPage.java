@@ -10,8 +10,6 @@ import java.util.stream.Collectors;
 
 public class CasesPage extends BasePage {
 
-    public UpperBarMenuPage upperBarMenuPage;
-    public FooterPage footer;
     public CasesPage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);

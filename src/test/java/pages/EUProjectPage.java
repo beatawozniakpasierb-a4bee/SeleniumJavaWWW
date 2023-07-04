@@ -7,9 +7,6 @@ import utils.TestData;
 
 public class EUProjectPage extends BasePage{
 
-    public UpperBarMenuPage upperBarMenuPage;
-    public FooterPage footer;
-
     public EUProjectPage(WebDriver driver) {
         super(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);

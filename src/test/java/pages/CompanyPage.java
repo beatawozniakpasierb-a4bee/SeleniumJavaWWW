@@ -3,15 +3,11 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.FooterData;
 import utils.TestData;
 
 import java.util.List;
 
 public class CompanyPage extends BasePage {
-
-    public UpperBarMenuPage upperBarMenuPage;
-    public FooterPage footer;
 
     public CompanyPage(WebDriver driver) {
         super(driver);

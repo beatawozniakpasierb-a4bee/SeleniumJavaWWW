@@ -10,9 +10,6 @@ import utils.TestData;
 
 public class CareerPage extends BasePage{
 
-    public FooterPage footer;
-    public UpperBarMenuPage upperBarMenuPage;
-
     public CareerPage(WebDriver driver) {
         super(driver);
         footer = new FooterPage(driver);
