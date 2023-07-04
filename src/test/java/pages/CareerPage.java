@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import utils.SeleniumHelper;
 import utils.TestData;
 
+import static utils.TestData.BASE_URL;
+
 public class CareerPage extends BasePage{
 
-    public CareerPage(WebDriver driver) {
-        super(driver);
+    public CareerPage(WebDriver driver, String url) {
+        super(driver, url);
         footer = new FooterPage(driver);
         upperBarMenuPage = new UpperBarMenuPage(driver);
     }
-
-    public String careerUrl = TestData.BASE_URL + "career/";
 
     @FindBy(xpath = "//div[@class='col-lg-10']/h4")
     private WebElement careerMotto;

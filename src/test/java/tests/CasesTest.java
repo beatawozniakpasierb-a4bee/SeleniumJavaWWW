@@ -15,13 +15,13 @@ public class CasesTest extends BaseTest {
 
     @BeforeMethod
     public void setUpPage() {
-        casesPage = new CasesPage(driver);
+        casesPage = new CasesPage(driver, TestData.BASE_URL + "cases/");
         casesPage.upperBarMenuPage.clickOnMenuCases();
     }
 
     @Test
     public void verifyCasesUrl() {
-        casesPage.verifyUrl(driver, casesPage.upperBarMenuPage.clickOnMenuCases().casesUrl);
+        casesPage.verifyUrl(driver, casesPage.url);
     }
 
     @Test

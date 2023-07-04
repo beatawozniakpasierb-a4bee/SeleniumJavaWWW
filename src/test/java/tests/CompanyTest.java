@@ -14,13 +14,13 @@ public class CompanyTest extends BaseTest{
 
     @BeforeMethod
     public void setUpPage() {
-        companyPage = new CompanyPage(driver);
+        companyPage = new CompanyPage(driver, TestData.BASE_URL + "company/");
         companyPage.upperBarMenuPage.clickOnMenuCompany();
     }
 
     @Test
     public void verifyCompanyUrl() {
-        companyPage.verifyUrl(driver, companyPage.upperBarMenuPage.clickOnMenuCompany().companyUrl);
+        companyPage.verifyUrl(driver, companyPage.url);
     }
 
     @Test

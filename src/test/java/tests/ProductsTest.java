@@ -12,13 +12,13 @@ public class ProductsTest extends BaseTest {
 
     @BeforeMethod
     public void setUpPage() {
-        productsPage = new ProductsPage(driver);
+        productsPage = new ProductsPage(driver, TestData.BASE_URL + "products/");
         productsPage.upperBarMenuPage.clickOnMenuProducts();
     }
 
     @Test
     public void verifyProductsUrl() {
-        productsPage.verifyUrl(driver, productsPage.upperBarMenuPage.clickOnMenuProducts().productsUrl);
+        productsPage.verifyUrl(driver, productsPage.url);
     }
 
     @Test

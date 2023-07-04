@@ -14,13 +14,13 @@ public class CareerTest extends BaseTest {
 
     @BeforeMethod
     public void setUpPage() {
-        careerPage = new CareerPage(driver);
+        careerPage = new CareerPage(driver, TestData.BASE_URL + "career/");
         careerPage.upperBarMenuPage.clickOnMenuCareer();
     }
 
     @Test
     public void verifyCareerUrl() {
-        careerPage.verifyUrl(driver, careerPage.upperBarMenuPage.clickOnMenuCareer().careerUrl);
+        careerPage.verifyUrl(driver, careerPage.url);
     }
 
     @Test

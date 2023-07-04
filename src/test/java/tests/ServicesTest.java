@@ -14,7 +14,7 @@ public class ServicesTest extends BaseTest {
 
     @BeforeMethod
     public void setUpPage() {
-        servicesPage = new ServicesPage(driver);
+        servicesPage = new ServicesPage(driver, TestData.BASE_URL + "services/");
         servicesPage.upperBarMenuPage.clickOnMenuServices();
     }
 
@@ -25,7 +25,7 @@ public class ServicesTest extends BaseTest {
 
     @Test
     public void verifyServicesUrl() {
-        servicesPage.verifyUrl(driver, servicesPage.upperBarMenuPage.clickOnMenuServices().servicesUrl);
+        servicesPage.verifyUrl(driver, servicesPage.url);
     }
 
     @Test

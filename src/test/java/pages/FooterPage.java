@@ -13,7 +13,6 @@ public class FooterPage extends BasePage{
         super(driver);
     }
 
-
     @FindBy(xpath = "//div[@class='footer--social-media']/a")
     private List<WebElement> listOfSocialMedia;
 

@@ -9,13 +9,11 @@ import java.util.List;
 
 public class CompanyPage extends BasePage {
 
-    public CompanyPage(WebDriver driver) {
-        super(driver);
+    public CompanyPage(WebDriver driver, String url) {
+        super(driver, url);
         upperBarMenuPage = new UpperBarMenuPage(driver);
         footer = new FooterPage(driver);
     }
-
-    public String companyUrl = TestData.BASE_URL + "company/";
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
     private WebElement companyMotto;

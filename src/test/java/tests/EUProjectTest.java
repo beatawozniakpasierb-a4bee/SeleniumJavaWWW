@@ -14,13 +14,13 @@ public class EUProjectTest extends BaseTest{
 
     @BeforeMethod
     public void setUpPage() {
-        euProjectPage = new EUProjectPage(driver);
+        euProjectPage = new EUProjectPage(driver, TestData.BASE_URL + "eu-projects/");
         euProjectPage.upperBarMenuPage.clickOnMenuEUProjects();
     }
 
     @Test @Ignore
     public void verifyEUProjectUrl() {
-        euProjectPage.verifyUrl(driver, euProjectPage.upperBarMenuPage.clickOnMenuEUProjects().euProjectUrl);
+        euProjectPage.verifyUrl(driver, euProjectPage.url);
     }
 
     @Test

@@ -8,13 +8,11 @@ import utils.TestData;
 
 public class ProductsPage extends BasePage {
 
-    public ProductsPage(WebDriver driver) {
-        super(driver);
+    public ProductsPage(WebDriver driver, String url) {
+        super(driver, url);
         upperBarMenuPage = new UpperBarMenuPage(driver);
         footer = new FooterPage(driver);
     }
-
-    public String productsUrl = TestData.BASE_URL + "products/";
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
     private WebElement productsMotto;

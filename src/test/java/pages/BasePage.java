@@ -6,9 +6,15 @@ import org.testng.Assert;
 
 public abstract class BasePage {
     protected WebDriver driver;
-
+    public String url;
     public FooterPage footer;
     public UpperBarMenuPage upperBarMenuPage;
+
+    protected BasePage(WebDriver driver, String url) {
+        this.driver = driver;
+        this.url = url;
+        PageFactory.initElements(driver, this);
+    }
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;

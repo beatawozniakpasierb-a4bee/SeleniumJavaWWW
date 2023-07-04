@@ -10,13 +10,11 @@ import java.util.List;
 
 public class ServicesPage extends BasePage {
 
-    public ServicesPage(WebDriver driver) {
-        super(driver);
+    public ServicesPage(WebDriver driver, String url) {
+        super(driver, url);
         upperBarMenuPage = new UpperBarMenuPage(driver);
         footer = new FooterPage(driver);
     }
-
-    public String servicesUrl = TestData.BASE_URL + "services/";
 
     @FindBy(xpath = "//div[@class='col-lg-5']/h4")
     private WebElement servicesMotto;

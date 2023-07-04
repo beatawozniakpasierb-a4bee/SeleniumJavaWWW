@@ -10,13 +10,11 @@ import java.util.stream.Collectors;
 
 public class KnowledgePage extends BasePage {
 
-    public KnowledgePage(WebDriver driver) {
-        super(driver);
+    public KnowledgePage(WebDriver driver, String url) {
+        super(driver, url);
         upperBarMenuPage = new UpperBarMenuPage(driver);
         footer = new FooterPage(driver);
     }
-
-    public String knowledgeUrl = TestData.BASE_URL + "knowledge-hub/";
 
     @FindBy(xpath = "//p[contains(@class,'text-p-responsive')]")
     private WebElement knowledgeMotto;

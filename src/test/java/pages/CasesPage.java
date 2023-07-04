@@ -10,13 +10,11 @@ import java.util.stream.Collectors;
 
 public class CasesPage extends BasePage {
 
-    public CasesPage(WebDriver driver) {
-        super(driver);
+    public CasesPage(WebDriver driver, String url) {
+        super(driver, url);
         upperBarMenuPage = new UpperBarMenuPage(driver);
         footer = new FooterPage(driver);
     }
-
-    public String casesUrl = TestData.BASE_URL + "cases/";
 
     @FindBy(xpath = "//h1[@class='mt-0']")
     private WebElement casesMotto;

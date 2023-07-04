@@ -15,13 +15,13 @@ public class KnowledgeTest extends BaseTest {
 
     @BeforeMethod
     public void setUpPage() {
-        knowledgePage = new KnowledgePage(driver);
+        knowledgePage = new KnowledgePage(driver, TestData.BASE_URL + "knowledge-hub/");
         knowledgePage.upperBarMenuPage.clickOnMenuKnowledge();
     }
 
     @Test
     public void verifyKnowledgeUrl() {
-        knowledgePage.verifyUrl(driver, knowledgePage.upperBarMenuPage.clickOnMenuKnowledge().knowledgeUrl);
+        knowledgePage.verifyUrl(driver, knowledgePage.url);
     }
 
     @Test
