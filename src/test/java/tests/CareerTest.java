@@ -25,7 +25,7 @@ public class CareerTest extends BaseTest {
 
     @Test
     public void verifyCareerMotto() {
-        Assert.assertEquals(careerPage.getCareerMottoText(), TestData.CAREER_MOTTO_TEXT);
+        Assert.assertEquals(careerPage.getMottoText(careerPage.careerMotto), TestData.CAREER_MOTTO_TEXT);
     }
 
     @Test

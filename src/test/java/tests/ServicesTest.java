@@ -20,7 +20,7 @@ public class ServicesTest extends BaseTest {
 
     @Test
     public void verifyServicesPage() {
-        Assert.assertEquals(servicesPage.getServicesMottoText(), TestData.SERVICES_MOTTO_TEXT);
+        Assert.assertEquals(servicesPage.getMottoText(servicesPage.servicesMotto), TestData.SERVICES_MOTTO_TEXT);
     }
 
     @Test

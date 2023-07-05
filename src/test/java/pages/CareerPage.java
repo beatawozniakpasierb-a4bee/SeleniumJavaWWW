@@ -19,7 +19,7 @@ public class CareerPage extends BasePage{
     }
 
     @FindBy(xpath = "//div[@class='col-lg-10']/h4")
-    private WebElement careerMotto;
+    public WebElement careerMotto;
 
     @FindBy(xpath = "//div[contains(@class,'offer-show')]")
     private WebElement careerItem;
@@ -79,7 +79,6 @@ public class CareerPage extends BasePage{
     public WebElement getCareerTitleInJobOffer() {
         return careerTitleInJobOffer;
     }
-    public String getCareerMottoText() {return careerMotto.getText().trim();}
 
     public CareerPage clickOnCareerItem() {
         careerItem.click();

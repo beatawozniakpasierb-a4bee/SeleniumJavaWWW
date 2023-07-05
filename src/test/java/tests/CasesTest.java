@@ -26,7 +26,7 @@ public class CasesTest extends BaseTest {
 
     @Test
     public void verifyCasesMotto() {
-        Assert.assertEquals(casesPage.getCasesMottoText(), TestData.CASES_MOTTO_TEXT);
+        Assert.assertEquals(casesPage.getMottoText(casesPage.casesMotto), TestData.CASES_MOTTO_TEXT);
     }
 
     @Test

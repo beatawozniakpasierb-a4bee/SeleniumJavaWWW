@@ -19,22 +19,22 @@ public class UpperBarMenuPage extends BasePage{
     @FindBy(xpath = "//div[@id='brand']")
     private WebElement brand;
 
-    @FindBy(id = "menu-item-445")
+    @FindBy(xpath = "//li/a[text()='Services']")
     private WebElement menuServices;
 
-    @FindBy(id = "menu-item-695")
+    @FindBy(xpath = "//li/a[text()='Products']")
     private WebElement menuProducts;
 
-    @FindBy(id = "menu-item-442")
+    @FindBy(xpath = "//li/a[text()='Career']")
     private WebElement menuCareer;
 
-    @FindBy(id = "menu-item-1042")
+    @FindBy(xpath = "//li/a[text()='Knowledge']")
     private WebElement menuKnowledge;
 
-    @FindBy(id = "menu-item-443")
+    @FindBy(xpath = "//li/a[text()='Case Studies']")
     private WebElement menuCases;
 
-    @FindBy(id = "menu-item-444")
+    @FindBy(xpath = "//li/a[text()='Company']")
     private WebElement menuCompany;
 
     @FindBy(xpath = "//div[@class='contact-us']/button[@type='button']")

@@ -25,7 +25,7 @@ public class CompanyTest extends BaseTest{
 
     @Test
     public void verifyCompanyMotto() {
-        Assert.assertEquals(companyPage.getCompanyMottoText(), TestData.COMPANY_MOTTO_TEXT);
+        Assert.assertEquals(companyPage.getMottoText(companyPage.companyMotto), TestData.COMPANY_MOTTO_TEXT);
     }
 
     @Test

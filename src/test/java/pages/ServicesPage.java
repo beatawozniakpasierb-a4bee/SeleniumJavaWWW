@@ -17,7 +17,7 @@ public class ServicesPage extends BasePage {
     }
 
     @FindBy(xpath = "//div[@class='col-lg-5']/h4")
-    private WebElement servicesMotto;
+    public WebElement servicesMotto;
 
     @FindBy(xpath = "//a[contains(@class,'arrow-right')]/h5")
     private List<WebElement> listOfOptions;
@@ -30,10 +30,6 @@ public class ServicesPage extends BasePage {
 
     public List<WebElement> getListOfOptions() {
         return listOfOptions;
-    }
-
-    public String getServicesMottoText() {
-        return servicesMotto.getText().trim();
     }
 
     public UpperBarMenuPage selectOption(WebElement element, WebDriver driver) {

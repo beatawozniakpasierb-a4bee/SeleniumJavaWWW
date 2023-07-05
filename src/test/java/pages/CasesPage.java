@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.TestData;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,14 +16,11 @@ public class CasesPage extends BasePage {
     }
 
     @FindBy(xpath = "//h1[@class='mt-0']")
-    private WebElement casesMotto;
+    public WebElement casesMotto;
 
     @FindBy(xpath = "//div[@class='case-box--captions']")
     private List<WebElement> listOfCaseStudies;
 
-    public String getCasesMottoText() {
-        return casesMotto.getText().trim();
-    }
 
     public List<String> getListOfCaseStudies() {
         return listOfCaseStudies.stream()

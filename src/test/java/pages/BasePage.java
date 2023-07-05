@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
@@ -24,4 +25,6 @@ public abstract class BasePage {
     public void verifyUrl(WebDriver driver, String expectedUrl) {
         Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
     }
+
+    public String getMottoText(WebElement mottoElement) {return mottoElement.getText().trim();}
 }

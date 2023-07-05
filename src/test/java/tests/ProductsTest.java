@@ -23,7 +23,7 @@ public class ProductsTest extends BaseTest {
 
     @Test
     public void verifyProductsPage() {
-        Assert.assertEquals(productsPage.getProductsMottoText(), TestData.PRODUCTS_MOTTO_TEXT);
+        Assert.assertEquals(productsPage.getMottoText(productsPage.productsMotto), TestData.PRODUCTS_MOTTO_TEXT);
     }
 
     @Test

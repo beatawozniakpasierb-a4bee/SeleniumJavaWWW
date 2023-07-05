@@ -14,11 +14,6 @@ public class EUProjectPage extends BasePage{
     }
 
     @FindBy(xpath = "//h1[@class='mt-0']")
-    private WebElement euProjectsMotto;
-
-
-    public String getEuProjectMottoText() {
-        return euProjectsMotto.getText().trim();
-    }
+    public WebElement euProjectsMotto;
 
 }

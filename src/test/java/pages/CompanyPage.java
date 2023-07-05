@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.TestData;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class CompanyPage extends BasePage {
     }
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
-    private WebElement companyMotto;
+    public WebElement companyMotto;
 
     @FindBy(xpath = "//div[contains(@class,'tns-slide-active')]")
     private List<WebElement> staffSlide;
@@ -32,10 +31,6 @@ public class CompanyPage extends BasePage {
 
     public WebElement getStaffEmail() {
         return staffEmail;
-    }
-
-    public String getCompanyMottoText() {
-        return companyMotto.getText().trim();
     }
 
     public Integer getStaffSlideSize() { return staffSlide.size();}

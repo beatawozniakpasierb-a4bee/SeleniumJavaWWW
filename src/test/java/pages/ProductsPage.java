@@ -15,10 +15,6 @@ public class ProductsPage extends BasePage {
     }
 
     @FindBy(xpath = "//div[@class='col-lg-4']/h4")
-    private WebElement productsMotto;
-
-    public String getProductsMottoText() {
-        return productsMotto.getText().trim();
-    }
+    public WebElement productsMotto;
 
 }

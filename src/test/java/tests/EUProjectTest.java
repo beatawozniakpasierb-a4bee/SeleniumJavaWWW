@@ -25,7 +25,7 @@ public class EUProjectTest extends BaseTest{
 
     @Test
     public void verifyEUProjectMotto() {
-        Assert.assertEquals(euProjectPage.getEuProjectMottoText(), TestData.EU_PROJECT_MOTTO);
+        Assert.assertEquals(euProjectPage.getMottoText(euProjectPage.euProjectsMotto), TestData.EU_PROJECT_MOTTO);
     }
     @Test
     public void verifyFooterAddress() {

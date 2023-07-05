@@ -17,14 +17,10 @@ public class KnowledgePage extends BasePage {
     }
 
     @FindBy(xpath = "//p[contains(@class,'text-p-responsive')]")
-    private WebElement knowledgeMotto;
+    public WebElement knowledgeMotto;
 
     @FindBy(xpath = "//div[@class='article-box--info']")
     private List<WebElement> listOfArticles;
-
-    public String getKnowledgeMottoText() {
-        return knowledgeMotto.getText().trim();
-    }
 
     public List<String> getListOfArticles() {
         return listOfArticles.stream()

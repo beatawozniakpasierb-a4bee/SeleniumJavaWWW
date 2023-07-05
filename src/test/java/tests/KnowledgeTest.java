@@ -26,7 +26,7 @@ public class KnowledgeTest extends BaseTest {
 
     @Test
     public void verifyKnowledgeMotto() {
-        Assert.assertEquals(knowledgePage.getKnowledgeMottoText(), TestData.KNOWLEDGE_MOTTO_TEXT);
+        Assert.assertEquals(knowledgePage.getMottoText(knowledgePage.knowledgeMotto), TestData.KNOWLEDGE_MOTTO_TEXT);
     }
 
     @Test
